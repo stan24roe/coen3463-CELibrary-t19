@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	.container
+		h1 New Recipe
+			form(method="POST", action="/rawr/#{update._id}/update")
+				p
+				input(type="text", placeholder="Song Title", name="name" value="#{update.songs}")
+				p
+				input(type="text", placeholder="number", name="Number" value="#{update.number}")
+				p
+				Textarea(placeholder="Author/Songwriter/Singer", name="a/s/s" value="#{update.a/s/s}")
+				p
+				Textarea(placeholder="Lyrics", name="Lrics" value="#{update.lyrics}")
+				
+				br
+				br
+				button(type="submit") Submit
